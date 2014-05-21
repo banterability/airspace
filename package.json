@@ -4,5 +4,10 @@
   "description": "Demo app for ground-stop module. Tracking delays at the 25 busiest airports'",
   "main": "index.coffee",
   "author": "Jeff Long",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "async": "^0.9.0",
+    "coffee-script": "^1.7.1",
+    "ground-stop": "^0.1.0"
+  }
 }
