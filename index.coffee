@@ -2,7 +2,7 @@ async = require 'async'
 fs = require 'fs'
 GroundStop = require 'ground-stop'
 
-AIRPORTS = JSON.parse fs.readFileSync './data/airports_10_busiest.json', encoding: 'utf-8'
+AIRPORTS = JSON.parse fs.readFileSync './data/airports.json', encoding: 'utf-8'
 
 presentStatus = (airport, cb) ->
   code = airport.code
