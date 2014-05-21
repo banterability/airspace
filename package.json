@@ -1,7 +1,7 @@
 {
   "name": "airspace",
   "version": "0.0.0",
-  "description": "Demo app for ground-stop module. Tracking delays at the 25 busiest airports'",
+  "description": "Demo app for ground-stop module. Tracking delays at the 25 busiest airports.",
   "main": "index.coffee",
   "author": "Jeff Long",
   "license": "MIT",
