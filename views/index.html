@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Airspace</title>
+  <style>
+    li.delayed{color:red;}
+  </style>
+</head>
+<body>
+  <ul id="airports"></ul>
+  <script>
+    var airportList = document.getElementById('airports');
+    var request = new XMLHttpRequest();
+    request.onload = function(){
+      console.log('xhr', this.responseText);
+      var data = JSON.parse(this.responseText);
+      data.airports.forEach(function(airport){
+        var listEl;
+        listEl = document.createElement('li');
+        listEl.textContent = "" + airport.code + " – " + airport.name + " Airport";
+        if(airport.delay == "true"){
+          listEl.classList.add('delayed');
+        }
+        airportList.appendChild(listEl);
+      });
+    }
+    request.open('get', '/status', true);
+    request.send();
+  </script>
+</body>
+</html>
